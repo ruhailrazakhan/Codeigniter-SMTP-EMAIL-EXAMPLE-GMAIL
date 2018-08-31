@@ -4,7 +4,6 @@ class email extends CI_Controller {
 	function __construct(){
 		// Call the Model constructor
 		parent::__construct();
-        $this->load->helper('url');
 
 	}
 	public function send_email(){
@@ -20,8 +19,9 @@ class email extends CI_Controller {
 		    'starttls'  => true,
 		    'newline'   => "\r\n"
 		    );
-
-		 $this->load->library('email', $config);
+		// We Need To Load Email Library For Using Email Functionality
+		 $this->load->library('email', $config);  
+		
 		 $this->email->from('noreply@gmail.com', 'Your Name');
 		 $this->email->to('sender@example.com');
 		 $this->email->subject('eKnowledgetree Enquiry Form');
