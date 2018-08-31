@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 session_start();
-class main extends CI_Controller {
+class email extends CI_Controller {
 	function __construct(){
 		// Call the Model constructor
 		parent::__construct();
